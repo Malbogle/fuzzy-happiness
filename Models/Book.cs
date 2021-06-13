@@ -15,5 +15,8 @@ namespace Library.Models
         [JsonProperty("isbn")]
         public IEnumerable<string> ISBN { get; set; }
 
+        [JsonProperty("author_name")]
+        public IEnumerable<string> AuthorsName { get; set; }
+
     }
 }
