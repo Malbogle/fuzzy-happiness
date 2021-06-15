@@ -25,6 +25,7 @@ namespace Library.Services
             if (response.IsSuccessStatusCode)
             {
                 author = await response.Content.ReadAsAsync<Author>();
+                author.AuthorName = authorName;
             }
             return author;
 
