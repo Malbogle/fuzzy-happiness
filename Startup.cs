@@ -41,6 +41,7 @@ namespace Library
             services.AddDbContext<DataContext>(p => p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSingleton<IAuthorService, AuthorSerivce>();
             services.AddSingleton<HttpClient, HttpClient>();
+            services.AddSingleton<IBookService, BookService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
