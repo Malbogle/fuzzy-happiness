@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Library.Controllers
 {
@@ -20,6 +21,7 @@ namespace Library.Controllers
         }
 
         [HttpGet("/all")]
+        [Authorize]
         public ActionResult<List<Book>> GetUserBooks()
         {
             List<Book> userBooks =  _userService.GetAllUserBooks();
