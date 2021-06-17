@@ -22,7 +22,7 @@ namespace Library.Models
         [JsonProperty("first_publish_year")]
         public int FirstPublishYear { get; set; }
 
-        [JsonProperty("authors_names")]
+        [JsonProperty("author_name")]
         public List<string> AuthorsName { get; set; }
 
         [JsonIgnore]
