@@ -11,7 +11,7 @@ namespace Library.Services
         private User _user;
         public UserService(User user)
         {
-            this._user = user;                
+            this._user = user; //this needs to change when auth is sorted
         }
         public List<Book> GetAllUserBooks()
         {
