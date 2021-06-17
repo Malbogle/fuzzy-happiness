@@ -1,5 +1,6 @@
 ﻿using Library.Models;
 using Library.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace Library.Controllers
         }
 
         [HttpGet("{author}")]
+        [Authorize]
         public async Task<ActionResult<Author>> Get(string author)
         {
             Author curAuthor = await _authorService.GetAuthor(author);
