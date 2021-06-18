@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Library.Models;
 using Library.Services;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Library.Controllers
 {
@@ -20,6 +20,7 @@ namespace Library.Controllers
         }
 
         [HttpGet("{book}")]
+        [Authorize]
         public async Task<ActionResult<BookResults>> Get(string book)
         {
             BookResults conBook = await _bookService.GetBook(book);

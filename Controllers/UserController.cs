@@ -20,7 +20,7 @@ namespace Library.Controllers
             this._userService = userService;
         }
 
-        [HttpGet("/all")]
+        [HttpGet("{all}")]
         [Authorize]
         public ActionResult<List<Book>> GetUserBooks()
         {
