@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: booktracker-api
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE64D34487E744B2B221A11F39D6402C }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFA35007F6954AFBBD9E5776D8E622B6 }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
