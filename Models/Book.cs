@@ -25,9 +25,7 @@ namespace Library.Models
         [JsonProperty("author_name")]
         public List<string> AuthorsName { get; set; }
 
-        [JsonIgnore]
-        public List<User> UsersBooks { get; set; }
-
+        public bool HasRead { get; set; } = false;
 
 
     }

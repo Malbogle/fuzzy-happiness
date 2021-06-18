@@ -9,5 +9,11 @@ namespace Library.Services
     public interface IBookService
     {
         public Task<BookResults> GetBook(string bookName);
+
+        public Book GetUserBook(string name);
+
+        public List<Book> GetAllUserBook();
+
+        public Task<Book> SaveBook(string name);
     }
 }
