@@ -17,7 +17,7 @@ namespace Library.Models
         private string _authorName;
         
         [JsonProperty("docs")]
-        public List<Book> Books { get; set; }
+        public List<BookResults> Books { get; set; }
 
         [MaxLength(200)]
         [JsonProperty("authorName")]
